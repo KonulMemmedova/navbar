@@ -1,0 +1,147 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all 0.2s linear;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+
+}
+html::-webkit-scrollbar{
+    width: 1rem;
+
+}
+html::-webkit-scrollbar-thumb{
+    background: red;
+}
+section{
+    padding: 3rem 9%;
+}
+
+
+.header{
+    text-align: center;
+    color: black;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+
+}
+
+/* keyforms*/
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        transform: translateY(-4rem) scale(0.4);
+
+    }
+}
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    background: rgb(83, 231, 83);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 9%;
+
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color: rgb(97, 53, 53);
+    font-weight: bolder;
+}
+.header .logo i{
+    color: rgb(177, 13, 13);
+}
+.header .navbar a{
+    margin:0 1.5rem 0 0 ;
+    font-size:1.7rem ;
+    color: black ;
+}
+.header .navbar a:hover{
+    color: red;
+}
+
+
+.header .icons div,
+.header .icons a
+{
+height: 4.5rem;
+width: 4.5rem;
+line-height: 4.5rem;
+border-radius: 5rem;
+background: rgb(200, 170, 228);
+font-size: 1.7rem;
+color: black;
+text-align: center;
+cursor: pointer;
+}
+
+
+.header .icons a:hover,
+.header .icons div:hover{
+    background: red;
+    color: azure;
+}
+.header #menu-btn{
+    display: none;
+}
+
+
+@media(max-width:991px){
+html{
+    font-size: 55%;
+}
+
+.header{
+    padding: 1.5rem 2rem;
+}
+section{
+    padding:3rem 2rem;
+}
+}
+@media(max-width:768px){
+    .header #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: wheat;
+        border-top: 2rem solid black;
+        border-bottom: 2rem solid black;
+        padding: 0.2rem;
+        clip-path: polygon(0 0,100% 0,100 0, 0 0);
+    }
+
+    .header .navbar .active{
+        clip-path: polygon(0 0,100% 0,100% 100% 0,100%);
+    }
+}
+.header .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 1rem;
+}
