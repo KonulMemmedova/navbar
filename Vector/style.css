@@ -1,0 +1,146 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Mitr:wght@300&family=Montserrat:wght@700&family=Roboto+Condensed:wght@300&family=Roboto+Mono:wght@200;300&family=Roboto+Serif:wght@300;400&family=Roboto+Slab:wght@400;500&family=Roboto:ital,wght@0,300;0,400;1,400&display=swap');
+
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Mitr', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Serif', serif;
+    font-family: 'Roboto Slab', serif;;
+  }
+
+
+  body{
+    background: rgb(161, 136, 136);
+  }
+
+
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+
+  .logoimg{
+    width: 100px;
+    height: 50px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+  }
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 5s ease forwards;
+}
+@keyframes slideTop {
+    0%{
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.navbar a:hover,
+.navbar a.active{
+    color: blue;
+}
+
+
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-img video{
+    max-width: 450px;
+
+}
+
+.home-content h3{
+    font-size: 32px;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h3 span{
+    color: blue;
+}
+
+.home-content p{
+    font-size: 16px;
+}
+
+
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+.home-content{
+    max-width: 600px;
+}
+.sosial-media a{
+
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: 2px solid blue;
+    border-radius: 20px;
+    color: blue;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: .5s ease;
+}
+
+.sosial-media a:hover{
+    background: blue;
+    color: black;
+    box-shadow: 0 0 20 blue;
+}
+
+
+
+
